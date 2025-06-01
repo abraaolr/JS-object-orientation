@@ -53,7 +53,7 @@ console.log(`I'm ${randomWizard.age} years old`)
 console.log(`Here's one of my powers: ${randomWizard.showRandomPower()}`)
 console.log('')
 
-const anotherRandomWizard = new Wizard(faker.person.firstName('female'), faker.number.int(15))
+const anotherRandomWizard = new Wizard(faker.person.firstName('male'), faker.number.int(15))
 
 console.log(`${anotherRandomWizard.greet()}, I'm ${anotherRandomWizard.name}. I'm a wizard too`)
 console.log(`I'm ${anotherRandomWizard.age} years old`)
