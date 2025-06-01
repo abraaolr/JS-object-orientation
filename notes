@@ -1,0 +1,17 @@
+class Wizard extends Human {
+  constructor(name, age, powers = []) {
+    super(name, age)
+    this.powers = [...powers]
+  }
+
+  showRandomPower() {
+    if (this.powers.lenght <= 0) {
+      return "I haven't developed any power yet, but I'm learning at Hogwartz!"
+    } else {
+      const randomIndex = Math.floor(Math.random() * this.powers.lenght)
+      return this.powers[randomIndex]
+    }
+  }  
+}
+
+const randomWizard = new Wizard{
