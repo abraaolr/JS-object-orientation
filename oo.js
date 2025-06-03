@@ -53,9 +53,44 @@ console.log(`I'm ${randomWizard.age} years old`)
 console.log(`Here's one of my powers: ${randomWizard.showRandomPower()}`)
 console.log('')
 
-const anotherRandomWizard = new Wizard(faker.person.firstName('male'), faker.number.int(15))
+const anotherRandomWizard = new Wizard(
+  faker.person.firstName('male'), 
+  faker.number.int(15))
 
 console.log(`${anotherRandomWizard.greet()}, I'm ${anotherRandomWizard.name}. I'm a wizard too`)
 console.log(`I'm ${anotherRandomWizard.age} years old`)
 console.log(anotherRandomWizard.showRandomPower())
+console.log('')
+class Gaucho extends Human {
+  constructor(name, age) {
+    super(name, age)
+  }
+
+  greet() {
+    return 'E aí tchê!'
+  }
+}
+
+const randomGaucho = new Gaucho(
+  faker.person.firstName(), 
+  faker.number.int(99))
+
+console.log(`${randomGaucho.greet()}, me chamo ${randomGaucho.name}`)
+console.log(`Eu tenho ${randomGaucho.age} anos no pelo`)
+console.log('')
+
+class Carioca extends Human {
+  constructor(name, age) {
+    super(name, age)
+  }
+
+  greet() {
+    return 'E aí, beleza?'
+  }
+}
+
+const randomCarioca = new Carioca(faker.person.firstName(), faker.number.int(99))
+
+console.log(`${randomCarioca.greet()}, me chamo ${randomCarioca.name}`)
+console.log(`Eu tenho ${randomCarioca.age}, tá ligado?`)
 console.log('')
