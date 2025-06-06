@@ -58,7 +58,17 @@ class Carioca extends Human {
   }
 
   describe() {
-    return `${this.greet()}, me chamo ${this.name} e tenho ${this.age} anos, tá ligado?`
+    return `${this.greet()} Me chamo ${this.name} e tenho ${this.age} anos, tá ligado?`
+  }
+}
+
+class Mineiro extends Human {
+  greet() {
+    return 'Bão'
+  }
+
+  describe() {
+    return `${this.greet()}, me chamo ${this.name} e tenho ${this.age} anos.`
   }
 }
 
@@ -101,4 +111,12 @@ const randomCarioca = new Carioca(
   faker.number.int(99)
 )
 console.log(randomCarioca.describe())
+console.log('')
+
+//  Mineiro
+const randomMineiro = new Mineiro(
+  faker.person.firstName(),
+  faker.number.int(99)
+)
+console.log(randomMineiro.describe())
 console.log('')
