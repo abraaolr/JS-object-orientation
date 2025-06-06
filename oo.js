@@ -68,7 +68,7 @@ class Mineiro extends Human {
   }
 
   describe() {
-    return `${this.greet()}, me chamo ${this.name} e tenho ${this.age} anos.`
+    return `${this.greet()}, michamo ${this.name} e tenho ${this.age} anos.`
   }
 }
 
